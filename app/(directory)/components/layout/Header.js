@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import '@/public/styles/header.css'; 
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Header = () => {
   const [menuExpanded, setMenuExpanded] = useState(false);
@@ -13,14 +14,14 @@ const Header = () => {
   return (
     <header className="siteHeader" data-expanded={menuExpanded}>
       <div className="siteHeader--container">
-        <a className="homeLink" href="/">
+        <Link className="homeLink" href="/">
         <Image src='/images/cgh-logo.svg'  alt="CGH logo"
             width="330"
             height="14"
             decoding="async"
             ></Image>
          
-        </a>
+        </Link>
         <nav>
           <button
             aria-controls="primary-menu"
@@ -33,8 +34,12 @@ const Header = () => {
             <span></span>
           </button>
           <ul className="menu" id="primary-menu">
-            <li><a href="/work/logos">Work</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li>
+              <Link href="/work/logos">Work</Link>
+              </li>
+              <li>
+              <Link href="/contact">Contact</Link>
+              </li>
           </ul>
         </nav>
       </div>

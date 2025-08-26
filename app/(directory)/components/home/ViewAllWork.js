@@ -1,10 +1,11 @@
 import '@/public/styles/view-all-work.css'; 
+import Link from 'next/link';
 
 
 const ViewAllWork = () => {
   return (
     <section className="pageContent pageContent--viewAllWork">
-      <a href="/work/logos">View more logos</a>
+      <Link href="/work/logos">View more logos</Link>
     </section>
   );
 };

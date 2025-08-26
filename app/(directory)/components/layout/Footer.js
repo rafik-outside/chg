@@ -1,4 +1,5 @@
 import '@/public/styles/footer.css'; 
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -6,9 +7,9 @@ const Footer = () => {
       <div className="site-footer--container">
         <section className="site-footer--links">
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/work/logos">Work</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><Link  href="/">Home</Link></li>
+            <li><Link  href="/work/logos">Work</Link></li>
+            <li><Link  href="/contact">Contact</Link></li>
           </ul>
         </section>
 

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';  // Import useState for managing toggle
 import '@/public/styles/filter.css';
+import Link from 'next/link';
 
 const FilterToggle = ({slug}) => {
     const filters = [
@@ -31,9 +32,9 @@ const FilterToggle = ({slug}) => {
                     }
                     return (
                         <span key={filter.slug}>
-                            <a href={filter.slug === currentFilter.slug ? filter.link : `/work/${filter.slug}`}>
+                            <Link href={filter.slug === currentFilter.slug ? filter.link : `/work/${filter.slug}`}>
                                 {filter.name}
-                            </a>
+                            </Link>
                         </span>
                     );
                 })}
