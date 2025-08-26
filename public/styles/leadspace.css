@@ -1,0 +1,51 @@
+.preamble--container {
+    position: relative
+}
+
+.preamble {
+    max-width: 810px;
+    margin-bottom: 60px
+}
+
+@media only screen and (min-width: 640px) {
+    .preamble {
+        letter-spacing:-.5px;
+        margin-bottom: 90px
+    }
+}
+
+#peacock {
+    aspect-ratio: 5;
+    pointer-events: none;
+    z-index: 3;
+    background-image: url(../images/peacock-sm.gif);
+    background-size: cover;
+    width: 100%;
+    max-width: 320px;
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translate(-50%)
+}
+
+@media only screen and (min-width: 640px) {
+    #peacock {
+        aspect-ratio:unset;
+        height: 100px;
+        max-width: unset;
+        background-image: url(../images/peacock.gif);
+        width: 540px;
+        bottom: -90px
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    #peacock {
+        left:calc(270px + 66.666%);
+        transform: translate(-100%)
+    }
+}
+
+.pageType-workCollection {
+    padding-bottom: 0
+}

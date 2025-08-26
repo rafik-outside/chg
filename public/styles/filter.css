@@ -1,0 +1,458 @@
+.preContent {
+    z-index: 4;
+    display: flex
+}
+
+@media only screen and (min-width: 640px) {
+    .preContent .waitingForThumbnails {
+        width:100%
+    }
+}
+
+.pageContent--workFilterAndSort {
+    flex: 1;
+    font-size: 1.125rem
+}
+
+@media only screen and (min-width: 960px) {
+    .pageContent--workFilterAndSort {
+        font-size:1.5rem
+    }
+}
+
+.pageContent--workFilterAndSort a.active {
+    color: #000;
+    cursor: text
+}
+
+.pageContent--workFilterAndSort select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: #666;
+    border: none;
+    text-decoration: underline
+}
+
+.pageContent--workFilterAndSort select:focus {
+    outline: none
+}
+
+.moreWork {
+    margin-bottom: 30px
+}
+
+.pageContent--workFilterAndSort {
+    flex-direction: column;
+    font-size: 1rem;
+    display: flex
+}
+
+@media only screen and (min-width: 640px) {
+    .pageContent--workFilterAndSort {
+        flex-direction:row;
+        font-size: 1.125rem
+    }
+}
+
+.pageContent--workFilterAndSort input {
+    position: absolute;
+    top: -9999px;
+    left: -9999px
+}
+
+@media (max-width: 639px) {
+    .pageContent--workFilterAndSort .filter-toggle.active:after {
+        top:13.5px;
+        transform: rotateX(-180deg)
+    }
+}
+
+@media only screen and (min-width: 640px) {
+    .pageContent--workFilterAndSort .filter-toggle.active:after {
+        opacity:0
+    }
+}
+
+.pageContent--workFilterAndSort .filter-toggle.active~.filter--otherLinks {
+    max-height: 4.125rem;
+    margin-bottom: 2.57813rem
+}
+
+@media only screen and (min-width: 640px) {
+    .pageContent--workFilterAndSort .filter-toggle.active~.filter--otherLinks {
+        margin-bottom:0
+    }
+}
+
+.pageContent--workFilterAndSort .filter-toggle.active~.filter--otherLinks span {
+    opacity: 1;
+    text-transform: capitalize;
+    max-width: 400px;
+    display: inline-block;
+    position: relative
+}
+
+.pageContent--workFilterAndSort .filter-toggle.active~.sort {
+    max-height: 6.1875rem
+}
+
+.pageContent--workFilterAndSort .filter-toggle.active~.sort li {
+    opacity: 1
+}
+
+.pageContent--workFilterAndSort .filter-toggle {
+    cursor: pointer;
+    opacity: 1;
+    text-transform: capitalize;
+    margin: -12px auto 0 0;
+    line-height: 2.0625rem;
+    transition: opacity .3s ease-in-out;
+    display: inline-block;
+    position: relative
+}
+
+@media only screen and (min-width: 640px) {
+    .pageContent--workFilterAndSort .filter-toggle {
+        margin-right:0;
+        padding-right: 24px
+    }
+}
+
+.pageContent--workFilterAndSort .filter-toggle:after {
+    content: " ";
+    opacity: 1;
+    background-image: url(/arrow.svg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 6px;
+    transition: transform .3s ease-in-out,top .15s ease-in-out,opacity .15s ease-in-out;
+    display: block;
+    position: absolute;
+    top: 14px;
+    right: -21px;
+    transform: rotateX(0)
+}
+
+@media only screen and (min-width: 640px) {
+    .pageContent--workFilterAndSort .filter-toggle:after {
+        top:11px;
+        right: 6px;
+        transform: rotate(-90deg)
+    }
+}
+
+.pageContent--workFilterAndSort .filter--otherLinks {
+    box-sizing: content-box;
+    flex-direction: column;
+    max-height: 0;
+    margin: 0;
+    padding: 0 14px 0 0;
+    transition: max-height .15s ease-in-out,margin .15s ease-in-out;
+    display: flex;
+    overflow: hidden
+}
+
+@media only screen and (min-width: 640px) {
+    .pageContent--workFilterAndSort .filter--otherLinks {
+        flex-direction:row;
+        max-height: none;
+        margin-top: -7px
+    }
+}
+
+.pageContent--workFilterAndSort .filter--otherLinks span {
+    float: left;
+    opacity: 0;
+    text-transform: capitalize;
+    max-width: 0;
+    line-height: 2.0625rem;
+    transition: opacity .3s ease-in-out .15s;
+    display: inline-block;
+    position: relative
+}
+
+@media only screen and (min-width: 640px) {
+    .pageContent--workFilterAndSort .filter--otherLinks span {
+        opacity:0;
+        max-width: none;
+        margin-right: 24px
+    }
+}
+
+.pageContent--workFilterAndSort .sort {
+    flex-direction: column;
+    max-height: 0;
+    margin: -9px 0 -12px;
+    padding: 0;
+    line-height: 2.0625rem;
+    list-style-type: none;
+    transition: max-height .15s ease-in-out,margin .15s ease-in-out;
+    display: flex;
+    overflow: hidden
+}
+
+@media only screen and (min-width: 640px) {
+    .pageContent--workFilterAndSort .sort {
+        flex-direction:row;
+        max-width: none;
+        max-height: none;
+        margin-left: auto;
+        overflow: visible
+    }
+}
+
+.pageContent--workFilterAndSort .sort li {
+    opacity: 0;
+    font-size: .8125rem;
+    line-height: 1.5rem;
+    transition: opacity .3s ease-in-out .15s;
+    display: inline
+}
+
+@media only screen and (min-width: 640px) {
+    .pageContent--workFilterAndSort .sort li {
+        opacity:1;
+        padding-left: 24px;
+        font-size: 1.125rem;
+        line-height: 2.0625rem
+    }
+
+    .pageContent--workFilterAndSort .sort li:first-child {
+        padding-left: 0
+    }
+}
+
+.pageContent--workFilterAndSort .sort li span {
+    color: #4d4d4d
+}
+
+
+.preContent {
+    z-index: 4;
+    display: flex
+}
+
+@media only screen and (min-width: 640px) {
+    .preContent .waitingForThumbnails {
+        width:100%
+    }
+}
+
+.pageContent--workFilterAndSort {
+    flex: 1;
+    font-size: 1.125rem
+}
+
+@media only screen and (min-width: 960px) {
+    .pageContent--workFilterAndSort {
+        font-size:1.5rem
+    }
+}
+
+.pageContent--workFilterAndSort a.active {
+    color: #000;
+    cursor: text
+}
+
+.pageContent--workFilterAndSort select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: #666;
+    border: none;
+    text-decoration: underline
+}
+
+.pageContent--workFilterAndSort select:focus {
+    outline: none
+}
+
+.moreWork {
+    margin-bottom: 30px
+}
+
+.pageContent--workFilterAndSort {
+    flex-direction: column;
+    font-size: 1rem;
+    display: flex
+}
+
+@media only screen and (min-width: 640px) {
+    .pageContent--workFilterAndSort {
+        flex-direction:row;
+        font-size: 1.125rem
+    }
+}
+
+.pageContent--workFilterAndSort input {
+    position: absolute;
+    top: -9999px;
+    left: -9999px
+}
+
+@media (max-width: 639px) {
+    .pageContent--workFilterAndSort .filter-toggle.active:after {
+        top:13.5px;
+        transform: rotateX(-180deg)
+    }
+}
+
+@media only screen and (min-width: 640px) {
+    .pageContent--workFilterAndSort .filter-toggle.active:after {
+        opacity:0
+    }
+}
+
+.pageContent--workFilterAndSort .filter-toggle.active~.filter--otherLinks {
+    max-height: 4.125rem;
+    margin-bottom: 2.57813rem
+}
+
+@media only screen and (min-width: 640px) {
+    .pageContent--workFilterAndSort .filter-toggle.active~.filter--otherLinks {
+        margin-bottom:0
+    }
+}
+
+.pageContent--workFilterAndSort .filter-toggle.active~.filter--otherLinks span {
+    opacity: 1;
+    text-transform: capitalize;
+    max-width: 400px;
+    display: inline-block;
+    position: relative
+}
+
+.pageContent--workFilterAndSort .filter-toggle.active~.sort {
+    max-height: 6.1875rem
+}
+
+.pageContent--workFilterAndSort .filter-toggle.active~.sort li {
+    opacity: 1
+}
+
+.pageContent--workFilterAndSort .filter-toggle {
+    cursor: pointer;
+    opacity: 1;
+    text-transform: capitalize;
+    margin: -12px auto 0 0;
+    line-height: 2.0625rem;
+    transition: opacity .3s ease-in-out;
+    display: inline-block;
+    position: relative
+}
+
+@media only screen and (min-width: 640px) {
+    .pageContent--workFilterAndSort .filter-toggle {
+        margin-right:0;
+        padding-right: 24px
+    }
+}
+
+.pageContent--workFilterAndSort .filter-toggle:after {
+    content: " ";
+    opacity: 1;
+    background-image: url(../images/arrow.svg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 6px;
+    transition: transform .3s ease-in-out,top .15s ease-in-out,opacity .15s ease-in-out;
+    display: block;
+    position: absolute;
+    top: 14px;
+    right: -21px;
+    transform: rotateX(0)
+}
+
+@media only screen and (min-width: 640px) {
+    .pageContent--workFilterAndSort .filter-toggle:after {
+        top:11px;
+        right: 6px;
+        transform: rotate(-90deg)
+    }
+}
+
+.pageContent--workFilterAndSort .filter--otherLinks {
+    box-sizing: content-box;
+    flex-direction: column;
+    max-height: 0;
+    margin: 0;
+    padding: 0 14px 0 0;
+    transition: max-height .15s ease-in-out,margin .15s ease-in-out;
+    display: flex;
+    overflow: hidden
+}
+
+@media only screen and (min-width: 640px) {
+    .pageContent--workFilterAndSort .filter--otherLinks {
+        flex-direction:row;
+        max-height: none;
+        margin-top: -7px
+    }
+}
+
+.pageContent--workFilterAndSort .filter--otherLinks span {
+    float: left;
+    opacity: 0;
+    text-transform: capitalize;
+    max-width: 0;
+    line-height: 2.0625rem;
+    transition: opacity .3s ease-in-out .15s;
+    display: inline-block;
+    position: relative
+}
+
+@media only screen and (min-width: 640px) {
+    .pageContent--workFilterAndSort .filter--otherLinks span {
+        opacity:0;
+        max-width: none;
+        margin-right: 24px
+    }
+}
+
+.pageContent--workFilterAndSort .sort {
+    flex-direction: column;
+    max-height: 0;
+    margin: -9px 0 -12px;
+    padding: 0;
+    line-height: 2.0625rem;
+    list-style-type: none;
+    transition: max-height .15s ease-in-out,margin .15s ease-in-out;
+    display: flex;
+    overflow: hidden
+}
+
+@media only screen and (min-width: 640px) {
+    .pageContent--workFilterAndSort .sort {
+        flex-direction:row;
+        max-width: none;
+        max-height: none;
+        margin-left: auto;
+        overflow: visible
+    }
+}
+
+.pageContent--workFilterAndSort .sort li {
+    opacity: 0;
+    font-size: .8125rem;
+    line-height: 1.5rem;
+    transition: opacity .3s ease-in-out .15s;
+    display: inline
+}
+
+@media only screen and (min-width: 640px) {
+    .pageContent--workFilterAndSort .sort li {
+        opacity:1;
+        padding-left: 24px;
+        font-size: 1.125rem;
+        line-height: 2.0625rem
+    }
+
+    .pageContent--workFilterAndSort .sort li:first-child {
+        padding-left: 0
+    }
+}
+
+.pageContent--workFilterAndSort .sort li span {
+    color: #4d4d4d
+}
