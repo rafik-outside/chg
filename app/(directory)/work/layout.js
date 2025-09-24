@@ -53,10 +53,10 @@ export default function Workpage() {
               <Loading />
             ) : slug === 'graphics' ? (
               <MasonryWrapper>
-                {data.map((work) => (
+                {data.map((work,key) => (
                   <WorkThumbnail
                     key={work.slug}
-                    imageSrc={work.thumbnail.sizes[0][0]}
+                    imageSrc={ key%2 == 1 ? work.thumbnail.sizes[0][0] : work.thumbnailReverse.sizes[0][0] }
                     title={work.title}
                     subtitle={work.subtitle}
                   />
